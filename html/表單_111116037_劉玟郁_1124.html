@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NTUE Employee Information</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Type</title>
+</head>
+<body>
+    <h1>新人報到表單</h1>
+    <fieldset>
+        <legend>個人資料</legend>
+        <br>
+        <div>
+            <form>
+                <label for="name" >姓名:</label>
+                <input type="name">
+            </form>
+        </div>
+        <br>
+        <div>
+            <label for="date" >生日:</label>
+            <input type="date">
+        </div>
+        <br>
+        <div>
+            <form>
+                <label for="phone" >行動電話號碼:</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            
+                <br>
+                <small>格式: 1234-456-789</small>
+        
+            </form>
+        </div>
+        <br>
+        <div>
+            <form>
+                <label for="email" >Email:</label>
+                <input type="email" placeholder="example@email.com">
+            </form>
+        </div>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>教育程度</legend>
+        <br>
+        <div>
+            <form>
+                <label for="browser" >最高學歷:</label>
+                <select name="browser">
+                    <option value=""disabled selected>請選擇</option>
+                    <option value="博士">博士</option>
+                    <option value="碩士">碩士</option>
+                    <option value="大學">大學</option>
+                    <option value="高中">高中</option>
+                </select>
+            </form>
+            
+        </div>
+        <br>
+        <div>
+            <form>
+                <label for="name">學校名稱:</label>
+
+                <input type="name"/>
+            </form>
+        </div>
+        <br>
+
+        <div>
+            <form>
+                <label for="">畢業狀況:</label>
+                <div>
+                    <input type="radio" id="已畢業" name="drone" value="已畢業" checked />
+                    <label for="已畢業">已畢業</label>
+
+                    <input type="radio" id="肄業" name="drone" value="肄業" checked />
+                    <label for="肄業">肄業</label>
+                </div>
+            </form>
+        </div>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>職位資訊</legend>
+        <br>
+        <div>
+            <form>
+                <label for="browser" >部門:</label>
+                <select name="browser">
+                    <option value=""disabled selected>請選擇</option>
+                    <option value="人力資源部">人力資源部</option>
+                    <option value="資訊技術部">資訊技術部</option>
+                    <option value="財務部">財務部</option>
+                </select>
+            </form>
+            
+        </div>
+        <br>
+        <div>
+            <form>
+                <label for="">性別:</label>
+                <div>
+                    <input type="radio" id="男" name="drone" value="男" checked />
+                    <label for="男">男</label>
+
+                    <input type="radio" id="女" name="drone" value="女" checked />
+                    <label for="女">女</label>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+
+    
+    <input type="submit">
+</body>
+
+</html>
