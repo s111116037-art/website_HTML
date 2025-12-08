@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex Layout</title>
+<style>
+/* 定義彈性盒容器樣式 */
+.flex-container {
+  padding: 0; /* 移除內邊距 */
+  margin: 0; /* 移除外邊距 */
+  list-style: none; /* 移除列表的預設項目符號 */
+
+  /* 設置為彈性佈局上下文 */
+  display: flex;
+
+  /* 定義彈性項目排列方向與是否允許換行
+     這裡的效果等同於以下：
+     flex-direction: row; // 預設水平排列
+     flex-wrap: wrap; // 允許項目換行
+   */
+
+  /* 如果不允許換行，可設為：flex-wrap: nowrap; */
+  flex-flow: row wrap;
+
+  /* 定義剩餘空間的分佈方式 */
+  justify-content: space-around; /* 項目均勻排列，每項目之間的空間相等 */
+}
+
+/* 定義彈性項目樣式 */
+.flex-item {
+  background: tomato; /* 背景設置為番茄紅 */
+  padding: 5px; /* 內邊距為 5px */
+  width: 200px; /* 固定寬度為 200px */
+  height: 150px; /* 固定高度為 150px */
+  margin-top: 10px; /* 每個項目之間的上外邊距為 10px */
+
+  line-height: 150px; /* 行高設置為 150px，使文字垂直居中 */
+  color: rgb(255, 255, 255); /* 文字顏色設置為白色 */
+  font-weight: bold; /* 文字加粗 */
+  font-size: 3em; /* 文字大小設置為 3 倍字體大小 */
+  text-align: center; /* 文字水平居中 */
+}
+</style>
+</head>
+<body>
+  <!-- 定義一個彈性容器，包含多個彈性項目 -->
+  <ul class="flex-container">
+    <!-- 每個列表項目為一個彈性項目 -->
+    <li class="flex-item">1</li>
+    <li class="flex-item">2</li>
+    <li class="flex-item">3</li>
+    <li class="flex-item">4</li>
+    <li class="flex-item">5</li>
+    <li class="flex-item">6</li>
+  </ul>
+</body>
+</html>

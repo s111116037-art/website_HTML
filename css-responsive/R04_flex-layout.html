@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex Layout</title>
+<style>
+  /* 設定主容器的 Flexbox 佈局 */
+  .wrapper {
+    display: flex; /* 啟用 Flexbox 排版 */
+    flex-flow: row wrap; /* 子項目排列方式為水平方向，並允許換行 */
+    font-weight: bold; /* 文字加粗 */
+    text-align: center; /* 預設文字置中 */
+  }
+
+  /* 對所有直接子元素設定基本樣式 */
+  .wrapper > * {
+    padding: 10px; /* 子元素內部的邊距 */
+    flex: 1 100%; /* 子元素初始寬度為 100%，但可以隨容器調整 */
+  }
+
+  /* 樣式：標題區塊 */
+  .header {
+    background: tomato; /* 背景色為番茄紅 */
+  }
+
+  /* 樣式：底部區塊 */
+  .footer {
+    background: lightgreen; /* 背景色為淺綠色 */
+  }
+
+  /* 樣式：主內容區塊 */
+  .main {
+    text-align: left; /* 文字靠左對齊 */
+    background: deepskyblue; /* 背景色為深天藍 */
+  }
+
+  /* 樣式：第一個側邊欄 */
+  .aside-1 {
+    background: gold; /* 背景色為金色 */
+  }
+
+  /* 樣式：第二個側邊欄 */
+  .aside-2 {
+    background: hotpink; /* 背景色為亮粉紅 */
+  }
+
+  /* 使用行動優先的設計方法
+   * 順序：
+   * 1. 標題
+   * 2. 主內容
+   * 3. 側邊欄 1
+   * 4. 側邊欄 2
+   * 5. 底部
+   */
+
+  /* 中型螢幕（寬度 >= 600px） */
+  @media all and (min-width: 600px) {
+    /* 讓兩個側邊欄共享同一行 */
+    .aside { flex: 1 auto; /* 自適應寬度 */ }
+  }
+
+  /* 大型螢幕（寬度 >= 800px） */
+  @media all and (min-width: 800px) {
+    /* 調整第一個側邊欄與主內容的順序
+     * 並讓主內容區域的寬度為兩倍於側邊欄
+     */
+    .main    { flex: 2 0px; } /* 主內容占用兩倍寬度 */
+    .aside-1 { order: 1; }   /* 第一個側邊欄顯示在第一位置 */
+    .main    { order: 2; }   /* 主內容顯示在第二位置 */
+    .aside-2 { order: 3; }   /* 第二個側邊欄顯示在第三位置 */
+    .footer  { order: 4; }   /* 底部顯示在第四位置 */
+  }
+
+  /* 整體頁面內部邊距 */
+  body {
+    padding: 2em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 標題區塊 -->
+    <header class="header">Header</header>
+    <!-- 主內容區塊 -->
+    <article class="main">
+      <p>Children are living with disease, old age and children, and they are suffering from hunger and poverty. The vestibulum tortor quam, feugiat vitae, needs ultricies, let it be time, before. Until then, free football is more important than ever. Aenean is the enemy of my life. Mauris investrat eleifend leo.</p>
+    </article>
+    <!-- 第一個側邊欄 -->
+    <aside class="aside aside-1">Aside 1</aside>
+    <!-- 第二個側邊欄 -->
+    <aside class="aside aside-2">Aside 2</aside>
+    <!-- 底部區塊 -->
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

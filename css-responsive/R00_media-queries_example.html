@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媒體查詢範例</title>
+  <style>
+    /* 預設樣式 */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      background-color: lightblue;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* 手機樣式 */
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px; /* 字體變小 */
+        background-color: lightgreen; /* 背景變綠 */
+      }
+    }
+
+    /* 平板樣式 */
+    @media (min-width: 601px) and (max-width: 900px) {
+      body {
+        font-size: 18px; /* 字體稍微縮小 */
+        background-color: lightyellow; /* 背景變黃 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>歡迎來到我的網站</h1>
+  <p>調整螢幕大小，看看背景顏色和字體如何變化！</p>
+</body>
+</html>
