@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集網站</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .portfolio-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-card img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區塊 -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>歡迎來到我的作品集網站</h1>
+            <p>探索我的最新項目和技能</p>
+        </div>
+    </section>
+
+    <!-- 作品集區塊 -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">我的作品集</h2>
+            <div class="row g-4">
+                <div class="col-md-4 portfolio-card">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品1">
+                        <div class="card-body">
+                            <h5 class="card-title">作品名稱 1</h5>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal1">查看詳情</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-card">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品2">
+                        <div class="card-body">
+                            <h5 class="card-title">作品名稱 2</h5>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal2">查看詳情</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 portfolio-card">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品3">
+                        <div class="card-body">
+                            <h5 class="card-title">作品名稱 3</h5>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal3">查看詳情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 詳情 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel1">作品名稱 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>這是作品 1 的詳細介紹。</p>
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="作品詳情">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel2">作品名稱 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>這是作品 2 的詳細介紹。</p>
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="作品詳情">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel3">作品名稱 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>這是作品 3 的詳細介紹。</p>
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="作品詳情">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 關於我區塊 -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>關於我</h2>
+            <p>這是一段關於你的介紹文字，展示你擁有的技能與經歷。</p>
+        </div>
+    </section>
+
+    <!-- 聯絡表單區塊 -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">聯絡我</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="輸入您的姓名">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="輸入您的 Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">訊息</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="輸入您的訊息"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">送出</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
